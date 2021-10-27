@@ -30,12 +30,14 @@
 
   <div class="flex h-80  gap-8 border border-l-0 rounded-lg">
     <div class="w-96 bg-gray-300">
-      <img
-        class="rounded-l-lg"
-        style="height: 100%; width: 100%; object-fit: cover"
-        src={book.cover.large}
-        alt="cover of the book"
-      />
+      {#if book.cover.larege}
+        <img
+          class="rounded-l-lg"
+          style="height: 100%; width: 100%; object-fit: cover"
+          src={book.cover.large}
+          alt="cover of the book"
+        />
+      {/if}
     </div>
     <div class="flex flex-col w-full justify-between h-full py-8 pr-8">
       <div>
