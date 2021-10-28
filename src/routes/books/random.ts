@@ -1,8 +1,10 @@
 import type { RequestHandler } from '@sveltejs/kit';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export const get: RequestHandler = async () => {
-  const nyBestSellerApi =
-    'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=Rj71AIlkian8S4hL8DLzUKLRHPBPZSpW';
+  const nyBestSellerApi = `https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=${process.env['NY_TIMES_API_KEY']}`;
 
   const numberOfBooks =
     (await fetch(`${nyBestSellerApi}&offset=0`)
