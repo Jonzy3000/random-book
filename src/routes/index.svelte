@@ -30,7 +30,7 @@
 
   <div class="flex h-80  gap-8 border border-l-0 rounded-lg">
     <div class="w-96 bg-gray-300">
-      {#if book.cover.larege}
+      {#if book.cover.large}
         <img
           class="rounded-l-lg"
           style="height: 100%; width: 100%; object-fit: cover"
